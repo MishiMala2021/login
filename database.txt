@@ -1,0 +1,15 @@
+//crea un archivo php llamado database.php
+<?php
+
+$server = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'readydb';
+
+try {
+  $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
+}catch(PDOException $e){
+  die('Connection Failed: ' . $e->getMessage());
+}
+
+?>
